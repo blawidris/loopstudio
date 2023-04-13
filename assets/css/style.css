@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+I *::after,
+*,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --alata-font: 'Alata', sans-serif;
+    --josefin-sans-font: 'Josefin Sans', sans-serif;
+    --body-text: 15px;
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark: hsl(0, 0%, 41%);
+}
+
+body {
+    font: normal var(--body-text)/1.5 var(--alata-font);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--very-dark);
+    font-family: var(--josefin-sans-font);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.ms-auto {
+    margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--josefin-sans-font);
+    line-height: 1;
+}
+
+.section {
+    padding: 120px 0 20px;
+}
+
+/* header */
+.main-header {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.bg-header {
+    background: url('../images/desktop/image-hero.jpg') no-repeat top center / cover;
+}
+
+.navbar {
+    padding-block: 30px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav .nav-link {
+    padding: .5rem;
+    color: var(--white);
+}
+
+/* hero */
+
+.hero-content {
+    width: 720px;
+    padding: 25px;
+    border: 1px solid var(--white);
+    position: absolute;
+    bottom: 150px;
+}
+
+
+.hero-content h1 {
+    font-size: 80px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.about-wrapper {
+    position: relative;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+/* .about-wrapper div {
+    width: 45%;
+} */
+
+.about-wrapper .content {
+    background-color: var(--white);
+    padding: 50px;
+    width: 100%;
+    margin-left: -200px;
+    height: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    /* padding-inline: 60px; */
+    margin-bottom: -10px;
+    
+
+}
+
+.about-wrapper .content h2 {
+    font-weight: 300;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.about-wrapper .content p {
+    color: var(--dark-gray);
+}
+
+.s-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-head .title{
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--black);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 2rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.btn-primary{
+    border: 2px solid var(--black);
+    color: var(--black);
+
+}
+
+.btn-primary:hover{
+    border: 0;
+    background: var(--black);
+    color: var(--white);
+    transition: background 1s ease-in;
+}
+
+.row{
+    display: flex;
+    flex: 0 0 auto;
+    gap: 22px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 40px;
+}
+
+@media screen and (max-width:1024px){
+
+    .row{
+        gap: 15px;
+    }
+}
+
+.col-3{
+    width:23%;
+}
+
+.creation .item{
+    position: relative;
+    overflow: hidden;
+}
+
+.creation .item .content{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    padding-inline: 20px;
+    display: flex;
+    align-items: end;
+     background-color: #30303083;
+    background-image: linear-gradient(175deg, #30303053 1%, #09090e47 100%);
+    
+}
+
+.creation .item .content:hover{
+    background: linear-gradient(318deg, rgba(255, 255, 255, 0.5) 0%, rgba(212, 212, 212, 0.5) 50%);
+}
+
+.item .title{
+    z-index: 1;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    color: var(--white);
+}
+
+.main-footer{
+    background-color: var(--black);
+}
+
+.main-footer.section{
+    padding-top: 30px;
+}
+
+
+.logo-social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-social p{
+    color: var(--dark-gray);
+    margin-top: 20px;
+}
+
+.logo-social .navbar-nav .nav-link:first-child{
+    padding-left: 0;
+}
